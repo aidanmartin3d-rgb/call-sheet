@@ -271,6 +271,56 @@
     margin: 0;
   }
 
+  .beyond-label {
+    margin-top: 2.25rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .roadmap-beyond {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-top: 0.9rem;
+    background: var(--border);
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 780px) {
+    .roadmap-beyond { grid-template-columns: 1fr; }
+  }
+
+  .roadmap-beyond .q {
+    background: var(--surface);
+    padding: 1.4rem 1.2rem;
+  }
+
+  .roadmap-beyond .q .qnum {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--accent-2);
+    margin-bottom: 0.7rem;
+  }
+
+  .roadmap-beyond .q h3 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+
+  .roadmap-beyond .q p {
+    font-size: 0.86rem;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
   /* --- budget --- */
   .budget-note {
     margin-top: 1.5rem;
@@ -862,6 +912,25 @@
         <span class="qnum">Q4</span>
         <h3>Open source release</h3>
         <p>Ship Call Sheet v1, get it in front of a few other small or indie MetaHuman productions, and iterate on real feedback. "Do You Copy?" keeps using it as its own pipeline tool throughout.</p>
+      </div>
+    </div>
+
+    <p class="beyond-label">Further out, no committed timeline</p>
+    <div class="roadmap-beyond">
+      <div class="q">
+        <span class="qnum">The dream</span>
+        <h3>An integrated production suite</h3>
+        <p>Call Sheet stops being just a mocap batcher and becomes the spine of a full production management tool &mdash; scheduling, media, shot tracking, and dailies talking to each other instead of living in six disconnected apps.</p>
+      </div>
+      <div class="q">
+        <span class="qnum">Other systems</span>
+        <h3>Beyond MetaHuman Animator</h3>
+        <p>Ingest paths for other capture pipelines, starting with SAM3D and GVHMR for markerless body and camera tracking straight off a single mono camera &mdash; no volume, no suit, no dependency on any one vendor's animator.</p>
+      </div>
+      <div class="q">
+        <span class="qnum">Optical tracking</span>
+        <h3>An open source optical system</h3>
+        <p>A marker-based optical tracking system to sit alongside the markerless pipeline, for productions that need higher-fidelity capture than a single camera can give &mdash; built and released in the open rather than licensed from a commercial rig.</p>
       </div>
     </div>
   </section>
